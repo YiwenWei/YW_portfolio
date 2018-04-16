@@ -94,10 +94,19 @@ h1.tag {
   display: table;
   margin: 10px auto;
   font-size: 60px;
-  font-family: helvetica, sans-serif;
+  font-family: -apple-system, helvetica, sans-serif;
   font-weight: 200;
   vertical-align: middle;
   display: table-cell;
+}
+h1.tag::before, h1.tag::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 2px;
+  margin: 0 10px;
+  width: 80px;
+  background-color: white;
 }
 .location {
   background-color: #222;
