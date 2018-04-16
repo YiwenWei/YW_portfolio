@@ -1,8 +1,8 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
@@ -25,16 +25,16 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
-  min-height: 30px;
+  background: white;
+  min-height: 80px;
   padding: 10px;
-  position: fixed;
+  /* position: fixed; */
   text-align: center;
 }
 .nav {
   display: flex;
   justify-content: space-around;
-  font-weight: 700;
+  font-weight: 350;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
@@ -43,7 +43,7 @@ a:hover {
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    color: grey;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -52,38 +52,53 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: grey;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/background.png') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  /* padding-top: 60px; */
+  background-color: transparent;
+  background-position: 50% 50%;
 }
 header {
   line-height: 1.5;
+  text-align: center;
 }
-header .profile-image {
+
+div.dimming {
+  display: table;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+
+.intro .profile-image {
   margin-top: 50px;
   width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  //height: 150px;
+  border-radius: 10%;
   border: 3px solid white;
   transition: all .5s;
 }
-header .profile-image:hover {
+.intro .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
 }
-.tag {
-  background-color: #efefef;
-  color: black;
+h1.tag {
+  /* background-color: #efefef; */
+  color: white;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+  font-size: 60px;
+  font-family: helvetica, sans-serif;
+  font-weight: 200;
+  vertical-align: middle;
+  display: table-cell;
+}
 .location {
   background-color: #222;
   color: yellow;
@@ -169,18 +184,18 @@ a.social:hover {
 
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
+      display: flex;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
   }
 
-  header {
-    min-height: 470px;
+  header, .dimming {
+    min-height: 800px;
   }
 
   .nav {
@@ -204,4 +219,3 @@ a.social:hover {
   }
 
 }
-
