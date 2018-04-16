@@ -9,7 +9,7 @@ body {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #222;
-  background: #f7f5f0;
+  background: white;
 }
 /* Link Styles */
 
@@ -27,27 +27,36 @@ a:hover {
   width: 100%;
   background: white;
   min-height: 80px;
-  padding: 10px;
-  /* position: fixed; */
+  padding: 0px;
+  position: table;
   text-align: center;
+  margin: 0 auto;
+
+  /* margin-top: 50%; */
 }
-.nav {
-  display: flex;
-  justify-content: space-around;
+.main-nav ul {
+  min-width: 300px;
+  display: inline-block;
+  /* justify-content: space-around; */
   font-weight: 350;
   list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
+  margin: auto;
+  padding-top: 10px;
+
+}
+.main-nav li{
+  display: table-cell;
+  text-transform: capitalize;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 35px;
+  font-weight: 500;
+  color: red;
+  /* color: rgb(102, 119, 136); */
+  /* display: inline; */
 }
 
-.nav .name {
-    display: block;
-    margin-right: auto;
-    color: grey;
-}
-.nav li {
-  padding: 5px 10px 10px 10px;
-}
+
 .nav a {
   transition: all .5s;
 }
@@ -74,17 +83,28 @@ div.dimming {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.39);
 }
-
+.intro p{
+  text-align: center;
+  margin: auto;
+  width: 400px;
+  font-size: 26px;
+  font-family: -apple-system, helvetica, sans-serif;
+  font-weight: 700;
+  color:rgb(85,85,85);
+  line-height: 34.8px;
+}
 .intro .profile-image {
+  object-fit: cover;
   margin-top: 50px;
-  width: 150px;
-  //height: 150px;
-  border-radius: 10%;
-  border: 3px solid white;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  /* border: 3px solid white; */
   transition: all .5s;
+  margin: 100px;
 }
 .intro .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2);
 }
 h1.tag {
   /* background-color: #efefef; */
@@ -98,6 +118,7 @@ h1.tag {
   font-weight: 200;
   vertical-align: middle;
   display: table-cell;
+  /* float: left; */
 }
 h1.tag::before, h1.tag::after {
   content: "";
@@ -108,19 +129,38 @@ h1.tag::before, h1.tag::after {
   width: 80px;
   background-color: white;
 }
+
+#fed{
+  top: 90px;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: -apple-system, helvetica, sans-serif;
+  position: absolute;
+  text-align: center;
+  top: 520px;
+  margin-left: 46%;
+}
+
 .location {
   background-color: #222;
   color: yellow;
 }
+
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
   background: #fff;
-  border-bottom: 4px solid #ccc;
+  /* border-bottom: 4px solid #ccc; */
   border-radius: 6px;
   transition: all .5s;
+}
+.card h2{
+  text-align: center;
+  font-family: -apple-system, helvetica, sans-serif;
 }
 .card:hover {
   border-color: #ff99ff;
@@ -146,8 +186,11 @@ ul.skills {
 
 footer {
   width: 100%;
-  min-height: 30px;
-  padding: 20px 0 40px 20px;
+  /* background: rgb(102,119,136); */
+  min-height: 40px;
+  padding: 0px;
+  width: 100%;
+  padding: 40px 40px 0px 40px;
 }
 
 footer .copyright {
@@ -201,16 +244,18 @@ a.social:hover {
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
+      margin-top: 30px;
+      margin-bottom: 100px;
   }
 
   header, .dimming {
     min-height: 800px;
   }
 
-  .nav {
+  /* .nav {
     max-width: 1200px;
     padding: 0 30px;
-  }
+  } */
 
 
   main {
@@ -223,7 +268,7 @@ a.social:hover {
 
   footer {
     font-size: 1.3em;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: 40px auto;
   }
 
